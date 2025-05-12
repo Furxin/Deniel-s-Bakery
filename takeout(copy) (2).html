@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Deniel's Bakery Shop</title>
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href='https://fonts.googleapis.com/css?family=Fauna+One' rel='stylesheet'>
+
+  <!-- Link to external CSS -->
+  <link rel="stylesheet" href="stylesf.css">
+</head>
+<body>
+  <!-- Navbar Section -->
+  <header class="navbar">
+    <a href="menu.html" class="back-button">&lt; Back to Menu</a>
+    <h1 class="bakery-name">DENIEL’S BAKERY SHOP</h1>
+    <div class="spacer"></div>
+  </header>
+
+  <!-- Main Content Section -->
+  <main class="product-container">
+    <!-- Left Side: Product Image -->
+    <div class="product-image">
+      <img src="cake2.png" alt="Vanilla Cake">
+    </div>
+
+    <!-- Right Side: Product Details -->
+    <div class="product-details">
+      <h2 class="product-title">Vanilla Cake</h2>
+      <p class="product-price">₱250</p>
+      
+      <h3 class="toggle-title">Description +</h3>
+      <p class="toggle-content" style="display: none;">
+        A soft, light cake with a delicate vanilla flavor, perfect for any occasion.
+      </p>
+
+      <h3 class="toggle-title">Ingredients +</h3>
+      <p class="toggle-content" style="display: none;">
+       All-purpose flour, sugar, butter, eggs, vanilla extract, milk, baking powder, salt.
+      </p>
+
+      <button id="AddToCart">+ Add to Cart</button>
+    </div>
+  </main>
+
+<!-- Modal for Add to Cart -->
+<div id="orderModal" class="modal">
+  <div class="modal-content">
+    <span class="close" id="closeModal">&times;</span>
+    
+    <h2>Enter Pickup Details</h2>
+
+    <form id="pickupForm">
+      <!-- Date picker -->
+      <label for="pickupDate">Select Pickup Date:</label>
+      <input type="date" id="pickupDate" name="pickupDate" required>
+
+      <!-- Time picker (restricted to 9 AM to 6 PM) -->
+      <label for="pickupTime">Select Pickup Time:</label>
+      <input type="time" id="pickupTime" name="pickupTime" required min="09:00" max="18:00">
+
+      <!-- Quantity Buttons -->
+      <label for="quantity">Quantity:</label>
+      <div class="quantity-container">
+        <button type="button" id="decreaseQuantity" class="quantity-btn">-</button>
+        <input type="number" id="quantity" name="quantity" value="1" min="1" readonly>
+        <button type="button" id="increaseQuantity" class="quantity-btn">+</button>
+      </div>
+      
+      <!-- Submit Order Button -->
+      <button type="submit" id="submitOrder">Submit Order</button>
+    </form>
+
+    <div id="receipt" class="receipt" style="display: none;">
+      <h3>Receipt</h3>
+      <p>Order Number: <span id="orderNumber"></span></p>
+      <p>Pickup Date: <span id="receiptDate"></span></p>
+      <p>Pickup Time: <span id="receiptTime"></span></p>
+      <p>Quantity: <span id="receiptQuantity"></span></p>
+      <p>Total: ₱<span id="receiptTotal"></span></p>
+    </div>
+  </div>
+</div>
+
+
+  <!-- Footer Section -->
+  <footer>
+    <p>&lt;2024@Daniel's Bakery&gt;</p>
+  </footer>
+
+  <!-- Add JavaScript -->
+  <script src="scriptf.js"></script>
+</body>
+</html>
