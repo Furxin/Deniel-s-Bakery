@@ -1,0 +1,426 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* General Styles */
+html, body {
+    height: 100%;
+    margin: 0; /* Remove default margin */
+}
+
+.main-content {
+    min-height: calc(100vh - 180px); /* Subtract the height of the footer and any other fixed sections */
+    padding-bottom: 100px; /* Add some space below the content to avoid being too tight with the footer */
+}
+
+  header {
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Navigation Bar Style */
+.navbar {
+  background-color: #e9963c; 
+  padding: 20px 40px; 
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%; 
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
+  border-radius: 0 0 10px 10px; 
+  transition: all 0.3s ease;
+}
+
+/* Style for the logo */
+.logo h1 {
+  margin: 0;
+  font-size: 1.9 em;
+  color: #272e22; 
+  font-family: 'Cinzel Decorative';
+  transition: color 0.3s ease;
+}
+
+.logo a {
+  text-decoration: none;
+}
+
+.logo a:hover h1 {
+  color: #e4a77b;
+}
+
+/* Style for the navigation links */
+.topnav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-evenly; 
+  gap: 20px;
+  width: 100%;
+}
+
+/* Navigation link items */
+.topnav li {
+  margin: 0;
+}
+
+/* Style for the navigation links */
+.topnav a {
+  text-decoration: none;
+  color: #272e22; 
+  font-weight: 600;
+  font-family: 'Fauna One';
+  text-transform: uppercase;
+  font-weight: bolder;
+  padding: 12px 20px; 
+  border-radius: 5px; 
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+/* Hover and active states for links */
+.topnav a.active,
+.topnav a:hover {
+  color: #ffffff; 
+  background-color: #76889d; 
+  border-radius: 5px;
+}
+/* Title Styling for Our Menu */
+.menu-title {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.menu-title h1 {
+  display: inline-block;
+  font-size: 2.5em;
+  color: #524d7f;
+  position: relative;
+  padding: 0 20px; 
+}
+
+.menu-title h1::before,
+.menu-title h1::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 40%;
+  height: 1px;
+  background-color: #76889d;
+  transform: translateY(-50%);
+}
+
+.menu-title h1::before {
+  left: -50%;  
+}
+
+.menu-title h1::after {
+  right: -50%;  
+}
+
+/* Menu Navigation */
+.menu-nav {
+  background-color: #a4b5c5;
+  padding: 10px 0;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  width: 100%; /* Full width */
+  margin: 0 auto; /* Center the nav */
+}
+
+.menu-nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.menu-nav ul li {
+  margin-right: 20px;
+}
+
+.menu-nav ul li a {
+  color: #272e22;
+  text-decoration: none;
+  font-size: 1.2em;
+  padding: 10px 20px;
+  transition: background-color 0.3s ease;
+  border-radius: 5px;
+}
+
+.menu-nav ul li a:hover {
+  background-color: #76889d;
+  color: #ffffff;
+}
+
+/* Main Content Section */
+/* Menu Sections */
+section {
+  margin-bottom: 80px;
+  width: 100%; /* Ensure the section width is full */
+  margin: 0 auto; /* Center content */
+}
+
+h2 {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-size: 2em;
+  color: #524d7f;;
+} 
+
+/* Menu Items - Flexbox Layout for Item Arrangement */
+.menu-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 3px;
+  margin-top: 20px;
+}
+
+.menu-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 250px; 
+  text-align: center;
+}
+
+.menu-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.menu-item h3 {
+  margin: 10px 0;
+  font-size: 1.5em;
+  color: #333;
+}
+
+.menu-item p {
+  font-size: 1em;
+  color: #272e22;
+  margin-bottom: 10px;
+}
+
+.menu-item button {
+  padding: 10px 15px;
+  background-color: #a4b5c5;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.menu-item a{
+  color: #272e22;
+  text-decoration: none;
+}
+
+.menu-item button:hover {
+  background-color: #f8be49;
+}
+
+#cart-count {
+  font-size: 20px;
+  font-weight: bold;
+  color: #ff6347;
+}
+
+/* Footer Section Styling */
+.footer {
+  background-color: #90AACB;
+  color: #fff;
+  padding: 40px 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  width: 100%;
+}
+
+/* Footer Section */
+.footer {
+  background-color: #76889d;
+  color: #fff;
+  padding: 40px 30px;
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  width: 100%;
+}
+
+/* Footer Logo Section */
+.footer-logo {
+  text-align: center;
+  flex: 1 1 250px;
+  margin-right: 40px;
+  margin-bottom: 20px;
+}
+
+.footer-logo img {
+  width: 150px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.footer-logo h2 {
+  font-family: 'Cinzel Decorative', serif; /* Elegant font to match the header logo */
+  font-size: 2.5em;
+  color: #a4b5c5; 
+  margin: 0;
+}
+
+/* Get in Touch Section */
+.get-in-touch {
+  flex: 1 1 250px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+.get-in-touch h3 {
+  color: #f8be49; /* Warm orange color from the header */
+  font-size: 1.3em;
+  margin-bottom: 15px;
+}
+
+.get-in-touch ul {
+  list-style: none;
+  padding: 0;
+  font-size: 1.1em;
+}
+
+.get-in-touch li {
+  margin-bottom: 10px;
+}
+
+/* Social Icons */
+.social-icons {
+  margin-top: 15px;
+}
+
+.social-icons a {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.social-icons a img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.social-icons a img:hover {
+  transform: scale(1.2);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Quick Links Section */
+.quick-links {
+  flex: 1 1 250px;
+  margin-bottom: 20px;
+}
+
+.quick-links h3 {
+  color: #f8be49; /* Matching the header's color scheme */
+  font-size: 1.3em;
+  margin-bottom: 15px;
+}
+
+.quick-links a {
+  color: #333333; /* Dark color for contrast */
+  text-decoration: none;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.quick-links a:hover {
+  text-decoration: underline;
+  color: #FD8B51; /* Hover effect with the header color */
+}
+
+/* Newsletter Section */
+.newsletter {
+  flex: 1 1 250px;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.newsletter h3 {
+  color: #f8be49; /* Warm color for consistency with the header */
+  font-size: 1.3em;
+  margin-bottom: 15px;
+}
+
+.newsletter form {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.newsletter input {
+  padding: 10px;
+  font-size: 1em;
+  border: none;
+  border-radius: 4px;
+  margin-right: 10px;
+  flex: 1;
+}
+
+.newsletter button {
+  padding: 10px 20px;
+  font-size: 1em;
+  background-color: #FD8B51; /* Matches the header color */
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.newsletter button:hover {
+  background-color: #f8be49; /* Slightly lighter orange for hover effect */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-content > div {
+    margin-bottom: 20px;
+  }
+
+  .newsletter form {
+    flex-direction: column;
+  }
+
+  .newsletter input {
+    margin-bottom: 10px;
+    margin-right: 0;
+  }
+}

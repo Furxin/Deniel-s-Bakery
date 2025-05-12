@@ -1,0 +1,628 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* General Styles */
+html, body {
+    height: 100%;
+    margin: 0; /* Remove default margin */
+}
+
+.main-content {
+    min-height: calc(100vh - 180px); /* Subtract the height of the footer and any other fixed sections */
+    padding-bottom: 100px; /* Add some space below the content to avoid being too tight with the footer */
+}
+
+  header {
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Navigation Bar Style */
+.navbar {
+  background-color: #e9963c; 
+  padding: 20px 40px; 
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%; 
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
+  border-radius: 0 0 10px 10px; 
+  transition: all 0.3s ease;
+}
+
+/* Style for the logo */
+.logo h1 {
+  margin: 0;
+  font-size: 1.9 em;
+  color: #272e22; 
+  font-family: 'Cinzel Decorative';
+  transition: color 0.3s ease;
+}
+
+.logo a {
+  text-decoration: none;
+}
+
+.logo a:hover h1 {
+  color: #e4a77b;
+}
+
+/* Style for the navigation links */
+.topnav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-evenly; 
+  gap: 20px;
+  width: 100%;
+}
+
+/* Navigation link items */
+.topnav li {
+  margin: 0;
+}
+
+/* Style for the navigation links */
+.topnav a {
+  text-decoration: none;
+  color: #272e22; 
+  font-weight: 600;
+  font-family: 'Fauna One';
+  text-transform: uppercase;
+  font-weight: bolder;
+  padding: 12px 20px; 
+  border-radius: 5px; 
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+/* Hover and active states for links */
+.topnav a.active,
+.topnav a:hover {
+  color: #ffffff; 
+  background-color: #76889d; 
+  border-radius: 5px;
+}
+  
+  .services-section {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #ffffff;
+    color: #333;
+    box-shadow: inset 0 6px 15px rgba(219, 109, 14, 0.4); 
+  }
+  
+  .services-section .section-title {
+    font-size: 2.8rem;
+    color: #557571;
+    text-transform: uppercase;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    font-weight: 700;
+  }
+  
+  .services-section .section-description {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 40px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+  }
+  
+  .awards-section {
+    padding: 60px 20px;
+    background-color: #ffffff;
+    text-align: center;
+    box-shadow: inset 0 6px 15px rgba(0, 0, 0, 0.4); 
+  }
+  
+  .section-title {
+    font-size: 2.5rem;
+    color: #557571;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    font-weight: 700;
+  }
+  
+  .line {
+    width: 100px;
+    height: 4px;
+    background: #557571;
+    margin: 10px auto;
+    border-radius: 2px;
+  }
+  
+  .section-description {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 40px;
+  }
+  
+  .awards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  
+  .award-card {
+    background: #F4F4F4;
+    position: relative;
+    overflow: hidden;
+    border-radius: 0px;
+    cursor: pointer;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .award-card p {
+    text-align: center;
+    margin: 0 auto; 
+    padding: 10px;   
+  }
+  
+  .award-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+  }
+  
+  .award-card:hover .award-image img {
+    transform: scale(1.1); 
+  }
+  
+  .award-card .hover-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background: rgba(137, 202, 213, 0.9);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .award-card:hover .hover-text {
+    opacity: 1;
+  }
+  
+  .award-card .hover-text h3 {
+    font-size: 2rem;  
+    color: #ffffff;        
+    margin-bottom: 10px;
+    font-weight: 800;    
+  }
+  
+  .highlight-box {
+    background-color: #557571; 
+    text-align: center;
+    padding: 20px;
+    font-size: 18px;
+    line-height: 1.5;
+    color: white;
+  }
+  .highlight-box span {
+    font-weight: bold;
+    font-style: italic;
+  }
+  
+  .award-card .hover-text p {
+    font-size: 1rem;    
+    color: #ffffff;     
+    font-weight: 400;   
+  }
+  
+  .colored-break {
+    display: block;
+    height: 5px;
+    background-color: #F7D1BA;
+    margin: 10px 0;
+  }
+  
+  .hero-section {
+    position: relative;
+    background: url('ser8.gif') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #F4F4F4;
+    text-align: center;
+    padding: 0 20px;
+  }
+  
+  .hero-content h1 {
+    font-size: 7rem;
+    font-family: 'Pacifico', cursive;
+    text-shadow: 4px 4px 8px rgb(0, 0, 0);
+  }
+  
+  .hero-content p {
+    font-size: 1.5rem;
+    margin: 20px 0;
+  }
+  
+  .hero-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .hero-button {
+    background-color: #557571;
+    color: #F4F4F4;
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    text-align: center;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    font-weight: bold;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+  }
+  
+  .hero-button:hover {
+    outline: 5px solid #557571;
+    background-color: #ffffff; 
+    color: #557571;
+  }
+  
+  .why-choose-us .section-title {
+    font-size: 2.7rem;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 2px;
+    line-height: 1.2;
+  }
+  
+  .section-description2 {
+    font-size: 1.1rem;
+    color: #FFFFFF;
+    margin-bottom: 40px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .services {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .service-card {
+    background-color: #ffebe4;
+    border: 3px solid #557571;
+    width: 300px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(255, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    position: relative;
+  }
+  
+  .service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .service-image img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .service-content {
+    padding: 20px;
+    text-align: left;
+  }
+  
+  .service-content h3 {
+    font-size: 1.8rem;
+    color: #557571;
+    margin-bottom: 10px;
+  }
+  
+  .service-content p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 15px;
+  }
+  
+  .service-features {
+    margin-bottom: 15px;
+  }
+  
+  .service-features li {
+    font-size: 0.9rem;
+    color: #555;
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+  }
+  
+  .service-features i {
+    color: #557571;
+    margin-right: 10px;
+  }
+  
+  .learn-more {
+    background-color: #557571;
+    color: #FFF;
+    border: solid 2px #FFEDD5;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    width: fit-content;
+    margin: 20px auto 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .learn-more:hover {
+    background-color: #557571;
+    transform: none;
+  }
+  
+  .why-choose-us {
+    padding: 60px 20px;
+    background: url('https://www.napoleonsbakery.com/wp-content/uploads/2023/07/Napoleons-Bakery-Donuts-Pastries-scaled.jpg') no-repeat center center;
+    background-size: cover;
+    color: #000000;
+    text-align: center;
+    position: relative;
+    border-radius: 20px 20px 0 0;
+    overflow: hidden;
+  }
+  
+  .why-choose-us::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+  }
+  
+  .why-choose-us .container {
+    position: relative;
+    z-index: 2;
+  }
+  
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 40px;
+  }
+  
+  .feature-card {
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    border: 2px solid #557571;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: #333;
+  }
+  
+  .feature-card:hover {
+    transform: none;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .feature-icon {
+    font-size: 3rem;
+    color: #557571;
+    margin-bottom: 15px;
+  }
+  
+  .feature-card h3 {
+    font-size: 1.5rem;
+    color: #557571;
+    margin-bottom: 10px;
+  }
+  
+  .feature-card p {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  .line {
+    width: 50%;
+    height: 5px;
+    background-color: #90AACB;
+    margin: 20px auto;
+  }
+  /* Footer Section */
+.footer {
+  background-color: #76889d; /* Light background to match the header's neutral tone */
+  color: #ffffff; /* Dark text for better contrast */
+  padding: 40px 30px;
+  display: flex;
+  justify-content: center; /* Centers the content */
+  font-family: 'Poppins', sans-serif; /* Modern sans-serif font to match the header */
+}
+
+/* Footer Content */
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  width: 100%;
+}
+
+/* Footer Logo Section */
+.footer-logo {
+  text-align: center;
+  flex: 1 1 250px;
+  margin-right: 40px;
+  margin-bottom: 20px;
+}
+
+.footer-logo img {
+  width: 150px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.footer-logo h2 {
+  font-family: 'Cinzel Decorative', serif; /* Elegant font to match the header logo */
+  font-size: 2.5em;
+  color: #333333; /* Dark text for better visibility */
+  margin: 0;
+}
+
+/* Get in Touch Section */
+.get-in-touch {
+  flex: 1 1 250px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+.get-in-touch h3 {
+  color: #f8be49; /* Warm orange color from the header */
+  font-size: 1.3em;
+  margin-bottom: 15px;
+}
+
+.get-in-touch ul {
+  list-style: none;
+  padding: 0;
+  font-size: 1.1em;
+}
+
+.get-in-touch li {
+  margin-bottom: 10px;
+}
+
+/* Social Icons */
+.social-icons {
+  margin-top: 15px;
+}
+
+.social-icons a {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.social-icons a img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.social-icons a img:hover {
+  transform: scale(1.2);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Quick Links Section */
+.quick-links {
+  flex: 1 1 250px;
+  margin-bottom: 20px;
+}
+
+.quick-links h3 {
+  color: #f8be49; /* Matching the header's color scheme */
+  font-size: 1.3em;
+  margin-bottom: 15px;
+}
+
+.quick-links a {
+  color: #ffffff; /* Dark color for contrast */
+  text-decoration: none;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.quick-links a:hover {
+  text-decoration: underline;
+  color: #FD8B51; /* Hover effect with the header color */
+}
+
+/* Newsletter Section */
+.newsletter {
+  flex: 1 1 250px;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.newsletter h3 {
+  color: #f8be49; /* Warm color for consistency with the header */
+  font-size: 1.3em;
+  margin-bottom: 15px;
+}
+
+.newsletter form {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.newsletter input {
+  padding: 10px;
+  font-size: 1em;
+  border: none;
+  border-radius: 4px;
+  margin-right: 10px;
+  flex: 1;
+}
+
+.newsletter button {
+  padding: 10px 20px;
+  font-size: 1em;
+  background-color: #76889d; /* Matches the header color */
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.newsletter button:hover {
+  background-color: #f8be49; /* Slightly lighter orange for hover effect */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-content > div {
+    margin-bottom: 20px;
+  }
+
+  .newsletter form {
+    flex-direction: column;
+  }
+
+  .newsletter input {
+    margin-bottom: 10px;
+    margin-right: 0;
+  }
+}

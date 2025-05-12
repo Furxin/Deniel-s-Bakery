@@ -1,0 +1,208 @@
+html, body {
+    font-family:'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+   height: 100%;
+    background-color: #ffffff;
+  }
+     
+  .main-content {
+      min-height: calc(100vh - 180px); /* Subtract the height of the footer and any other fixed sections */
+      padding-bottom: 100px; /* Add some space below the content to avoid being too tight with the footer */
+  }
+  
+    header {
+      margin: 0;
+      padding: 0;
+    }
+  
+    /* Navigation Bar Style */
+  .navbar {
+    background-color: #e9963c; 
+    padding: 20px 40px; 
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%; 
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
+    border-radius: 0 0 10px 10px; 
+    transition: all 0.3s ease;
+  }
+  
+  /* Style for the logo */
+  .logo h1 {
+    margin: 0;
+    font-size: 1.9 em;
+    color: #272e22; 
+    font-family: 'Cinzel Decorative';
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  .logo a {
+    text-decoration: none;
+  }
+  
+  .logo a:hover h1 {
+    color: #e4a77b;
+  }
+  
+  /* Style for the navigation links */
+  .topnav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-evenly; 
+    gap: 20px;
+    width: 100%;
+  }
+  
+  /* Navigation link items */
+  .topnav li {
+    margin: 0;
+  }
+  
+  /* Style for the navigation links */
+  .topnav a {
+    text-decoration: none;
+    color: #272e22; 
+    font-weight: 600;
+    font-family: 'Fauna One';
+    text-transform: uppercase;
+    font-weight: bolder;
+    padding: 12px 20px; 
+    border-radius: 5px; 
+    transition: color 0.3s ease, background-color 0.3s ease;
+  }
+  
+  /* Hover and active states for links */
+  .topnav a.active,
+  .topnav a:hover {
+    color: #ffffff; 
+    background-color: #76889d; 
+    border-radius: 5px;
+  }
+
+.background {
+    background-image: url('bakery-bg.jpg'); /* Replace with actual image */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    padding-top: 80px; /* space for fixed navbar */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .container {
+    background: white;
+    border-radius: 20px;
+    padding: 25px 20px;
+    max-width: 960px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 25px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    animation: fadeInUp 0.8s ease-in-out;
+    max-height: 80vh;
+    overflow-y: auto;
+    border-top: 10px solid #f26522;
+    border-bottom: 10px solid #f26522;
+  }
+  
+  /* Phones */
+  .phones {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .phone {
+    width: 200px;
+    height: auto;
+  }
+  
+  /* Download Content */
+  .download-content {
+    flex: 1;
+  }
+
+  .download-content h1 {
+    font-family: 'Anton', sans-serif;
+    font-size: 3.2rem;
+    font-weight: normal;
+    color: #000;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  
+  
+  p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .subtext {
+    font-size: 0.9rem;
+    color: #777;
+  }
+  
+  .download-btn {
+    display: inline-block;
+    background-color: #ff5c00;
+    color: white;
+    font-weight: bold;
+    padding: 12px 28px;
+    border-radius: 30px;
+    text-decoration: none;
+    margin-top: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .download-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+  }
+  
+  /* Animation */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responsive Layout */
+  @media screen and (max-width: 768px) {
+    .container {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .phones {
+      justify-content: center;
+    }
+  
+    .phone {
+      width: 120px;
+    }
+  
+    .download-content {
+      margin-top: 20px;
+    }
+  }
+  

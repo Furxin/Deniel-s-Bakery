@@ -1,0 +1,353 @@
+html, body {
+    height: 100%;
+    margin: 0; /* Remove default margin */
+}
+
+.main-content {
+    min-height: calc(100vh - 180px); /* Subtract the height of the footer and any other fixed sections */
+    padding-bottom: 100px; /* Add some space below the content to avoid being too tight with the footer */
+}
+
+  header {
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Navigation Bar Style */
+.navbar {
+  background-color: #e9963c; 
+  padding: 20px 40px; 
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%; 
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
+  border-radius: 0 0 10px 10px; 
+  transition: all 0.3s ease;
+}
+
+/* Style for the logo */
+.logo h1 {
+  margin: 0;
+  font-size: 1.9 em;
+  color: #272e22; 
+  font-family: 'Cinzel Decorative';
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.logo a {
+  text-decoration: none;
+}
+
+.logo a:hover h1 {
+  color: #e4a77b;
+}
+
+/* Style for the navigation links */
+.topnav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-evenly; 
+  gap: 20px;
+  width: 100%;
+}
+
+/* Navigation link items */
+.topnav li {
+  margin: 0;
+}
+
+/* Style for the navigation links */
+.topnav a {
+  text-decoration: none;
+  color: #272e22; 
+  font-weight: 600;
+  font-family: 'Fauna One';
+  text-transform: uppercase;
+  font-weight: bolder;
+  padding: 12px 20px; 
+  border-radius: 5px; 
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+/* Hover and active states for links */
+.topnav a.active,
+.topnav a:hover {
+  color: #ffffff; 
+  background-color: #76889d; 
+  border-radius: 5px;
+}
+  
+.introduction {
+    display: flex;
+    justify-content: space-around; /* Space items evenly across the row */
+    align-items: flex-start;
+    padding: 20px;
+    margin-top: 140px;
+    flex-wrap: wrap; /* Ensures responsiveness on smaller screens */
+}
+
+.a1 {
+    display: flex;
+    flex-direction: column; /* Stack image above text */
+    align-items: center;
+    justify-content: center;
+    margin: 10px; /* Adjust margin between items */
+    width: 220px; /* Adjust width to fit 4 items in a row */
+    border: 2px solid #e9963c; /* Border color */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px; /* Add padding for spacing inside the border */
+    transition: transform 0.3s ease;
+}
+
+.a1:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.fb {
+    display: flex;
+    flex-direction: column; /* Stack image above text */
+    align-items: center;
+}
+
+.logoimg {
+    width: 60px; /* Adjust size of the image */
+    height: 60px; /* Adjust size of the image */
+    margin-bottom: 10px; /* Space between image and text */
+}
+
+.middle .text {
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    color: #333;
+    font-weight: 500;
+}
+
+.text-link {
+    text-decoration: none;
+    color: #e9963c; /* Matching link color */
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.text-link:hover {
+    color: #272e22; /* Darker shade on hover */
+}
+
+/* FAQ Section */
+.faq-section {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #f8be49;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.faq-section h2 {
+    font-family: 'Cinzel Decorative', serif;
+    color: #272e22;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.faq-item {
+    margin-bottom: 15px;
+}
+
+.faq-question {
+    background-color: #e9963c;
+    color: #fff;
+    font-family: 'Fauna One', serif;
+    font-size: 1.2em;
+    padding: 10px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.faq-question:hover {
+    background-color: #76889d;
+}
+
+.faq-answer {
+    display: none;
+    background-color: #a4b5c5;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    color: #272e22;
+}
+
+.faq-answer.open {
+    display: block;
+}
+
+.faq-item button:focus {
+    outline: none;
+}
+
+/* Footer Section */
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    width: 100%;
+    margin-top: 30px;
+    background-color: #76889d;
+}
+
+.footer-logo {
+    text-align: center;
+    flex: 1 1 250px;
+    margin-right: 40px;
+    margin-bottom: 20px;
+}
+
+.footer-logo img {
+    width: 150px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.footer-logo h2 {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 1.8em;
+    color: #a4b5c5;
+    margin: 0;
+}
+
+.get-in-touch {
+    flex: 1 1 250px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.get-in-touch h3 {
+    color: #e9963c;
+    font-size: 1.3em;
+    margin-bottom: 15px;
+}
+
+.get-in-touch ul {
+    list-style: none;
+    padding: 0;
+    font-size: 1.1em;
+}
+
+.get-in-touch li {
+    margin-bottom: 10px;
+}
+
+.social-icons {
+    margin-top: 15px;
+}
+
+.social-icons a {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.social-icons a img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.social-icons a img:hover {
+    transform: scale(1.2);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Quick Links Section */
+.quick-links {
+    flex: 1 1 250px;
+    margin-bottom: 20px;
+}
+
+.quick-links h3 {
+    color: #e9963c;
+    font-size: 1.3em;
+    margin-bottom: 15px;
+}
+
+.quick-links a {
+    color: #333333;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.quick-links a:hover {
+    text-decoration: underline;
+    color: #e9963c;
+}
+
+/* Newsletter Section */
+.newsletter {
+    flex: 1 1 250px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.newsletter h3 {
+    color: #e9963c;
+    font-size: 1.3em;
+    margin-bottom: 15px;
+}
+
+.newsletter form {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.newsletter input {
+    padding: 10px;
+    font-size: 1em;
+    border: none;
+    border-radius: 4px;
+    margin-right: 10px;
+    flex: 1;
+}
+
+.newsletter button {
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #e9963c;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.newsletter button:hover {
+    background-color: #f4a261;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-content > div {
+        margin-bottom: 20px;
+    }
+
+    .newsletter form {
+        flex-direction: column;
+    }
+}
